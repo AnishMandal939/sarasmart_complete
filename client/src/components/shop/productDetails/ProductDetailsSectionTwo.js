@@ -69,7 +69,7 @@ const ProductDetailsSectionTwo = (props) => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <section className="m-4 md:mx-12 md:my-8">
         <Menu />
         {data.menu ? (
@@ -87,7 +87,7 @@ const ProductDetailsSectionTwo = (props) => {
           </span>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 
