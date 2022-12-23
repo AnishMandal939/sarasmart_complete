@@ -53,10 +53,20 @@ mongoose
   )
   .catch((err) => console.log("Database Not Connected !!!"));
 
+const corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders:
+    "Access-Control-Allow-Headers,Access-Control-Allow-Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Cache-Control,Content-Type,X-Token,X-Refresh-Token,token",
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
+
 // Middleware
 app.use(morgan("dev"));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
