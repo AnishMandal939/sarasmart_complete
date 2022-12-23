@@ -8,3 +8,14 @@
   flex-direction: column;
   transition: all 1s;
 }
+.scroll-to-top {
+  border-radius: 100% !important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  outline: none !important;
+  border: none !important;
+}
+.scroll-to-top  svg{
+  color: white !important;
+}

@@ -30,7 +30,23 @@ const Navber = (props) => {
   return (
     <Fragment>
       {/* Navber Section */}
-      <nav className="fixed top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
+
+      <nav className="fixed top-4 w-full z-20 shadow-lg lg:shadow-none bg-white">
+              {/* top navbar */}
+      <div className="top__nav flex m-100 w-full">
+        <div className="bg-red-600 w-6/12 text-white p-2">
+          <p className="text-center">
+            <span>xxxxxxxx</span> | <span>xxxxxxxxxx</span> (NCELL) Contact Information
+          </p>
+        </div>
+        <div className="bg-green-600 w-6/12 text-white p-2">
+        <p>
+            <span className="float-right cursor-pointer mx-4">Track My Order</span>
+          </p>
+        </div>
+
+      </div>
+      {/* top navbar end */}
         <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
           <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
             <span

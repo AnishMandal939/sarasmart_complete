@@ -67,6 +67,33 @@ const AdminSidebar = (props) => {
         </div>
         <hr className="border-b border-gray-200" />
         <div
+          onClick={(e) => history.push("/admin/dashboard/subcategories")}
+          className={`${
+            location.pathname === "/admin/dashboard/subcategories"
+              ? "border-r-4 border-gray-800 bg-gray-100"
+              : ""
+          } hover:bg-gray-200 cursor-pointer flex flex-col items-center justify-center py-6`}
+        >
+          <span>
+            <svg
+              className="w-8 h-8 text-gray-600 hover:text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+              />
+            </svg>
+          </span>
+          <span className="hover:text-gray-800">Sub Categories</span>
+        </div>
+        <hr className="border-b border-gray-200" />
+        <div
           onClick={(e) => history.push("/admin/dashboard/products")}
           className={`${
             location.pathname === "/admin/dashboard/products"
