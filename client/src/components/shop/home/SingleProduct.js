@@ -62,12 +62,12 @@ const SingleProduct = (props) => {
         products.map((item, index) => {
           return (
             <Fragment key={index}>
-              <div className="relative col-span-1 m-2" style={{width: '160px', height: '560px'}}>
+              <div className="relative col-span-1 m-2 hover:shadow-md hover:scale-50" >
                 <img
                   onClick={(e) => history.push(`/products/${item._id}`)}
                   className="w-full object-cover object-center cursor-pointer"
                   src={`${apiURL}/uploads/products/${item.pImages[0]}`}
-                  alt="" style={{height: '30%'}}
+                  alt=""
                 />
                 <div className="flex items-center justify-between mt-2">
                   <div className="text-gray-600 font-light truncate">
@@ -98,7 +98,7 @@ const SingleProduct = (props) => {
                 <div>${item.pPrice}.00</div>
                 {/* WhisList Logic  */}
                 <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
-                  {/* <svg
+                  <svg
                     onClick={(e) => isWishReq(e, item._id, setWlist)}
                     className={`${
                       isWish(item._id, wList) && "hidden"
@@ -114,7 +114,7 @@ const SingleProduct = (props) => {
                       strokeWidth={2}
                       d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                     />
-                  </svg> */}
+                  </svg>
                   <svg
                     onClick={(e) => unWishReq(e, item._id, setWlist)}
                     className={`${

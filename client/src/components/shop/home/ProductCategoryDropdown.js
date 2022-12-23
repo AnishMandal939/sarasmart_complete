@@ -30,7 +30,7 @@ const CategoryList = () => {
   return (
     <div className={`${data.categoryListDropdown ? "" : "hidden"} my-4`}>
       <hr />
-      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         {categories && categories.length > 0 ? (
           categories.map((item, index) => {
             return (
