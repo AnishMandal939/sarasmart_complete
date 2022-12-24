@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "./style.css";
+import logo from "./assets/logo.jpeg"
 
 import { logout } from "./Action";
 import { LayoutContext } from "../index";
@@ -89,7 +90,8 @@ const Navber = (props) => {
               style={{ letterSpacing: "0.10rem" }}
               className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
             >
-              Sarasmart
+              {/* Sarasmart */}
+              <img src={logo} alt="logo" style={{width: '33%', margin: 'auto'}} />
             </span>
           </div>
           <div
@@ -97,7 +99,9 @@ const Navber = (props) => {
             style={{ letterSpacing: "0.70rem" }}
             className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
           >
-            Sarasmart
+            {/* Sarasmart */}
+            <img src={logo} alt="logo" style={{width: '33%', margin: 'auto'}} />
+
           </div>
           <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
@@ -106,7 +110,7 @@ const Navber = (props) => {
               className="hover:bg-gray-200 rounded-lg px-2 py-2 cursor-pointer"
               title="Wishlist"
             >
-              {/* <svg
+              <svg
                 className={`${
                   location.pathname === "/wish-list"
                     ? "fill-current text-gray-800"
@@ -123,7 +127,7 @@ const Navber = (props) => {
                   strokeWidth={2}
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
-              </svg> */}
+              </svg>
             </div>
             {localStorage.getItem("jwt") ? (
               <Fragment>

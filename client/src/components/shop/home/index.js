@@ -16,7 +16,9 @@ const HomeComponent = () => {
         <ProductCategory />
       </section>
       {/* Product Section */}
-      <section className="m-4 md:mx-8 md:my-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <h4 className="container mx-auto text-gray-400 text-2xl">All Products</h4>
+
+      <section className="m-4 md:mx-8 md:my-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         <SingleProduct />
       </section>
     </Fragment>
